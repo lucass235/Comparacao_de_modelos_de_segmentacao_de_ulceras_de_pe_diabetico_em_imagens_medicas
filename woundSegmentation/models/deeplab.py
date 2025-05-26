@@ -40,7 +40,7 @@ from tensorflow.keras.layers import InputSpec
 from tensorflow.keras.utils import get_source_inputs
 from keras import backend as K
 from keras.applications import imagenet_utils
-from keras.utils import conv_utils
+from tensorflow.python.keras.utils import conv_utils
 from keras.utils.data_utils import get_file
 from tensorflow.keras.layers import UpSampling2D
 
