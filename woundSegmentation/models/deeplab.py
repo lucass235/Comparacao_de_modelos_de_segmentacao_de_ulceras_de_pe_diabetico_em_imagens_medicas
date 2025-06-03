@@ -41,7 +41,7 @@ from tensorflow.keras.utils import get_source_inputs
 from keras import backend as K
 from keras.applications import imagenet_utils
 from tensorflow.python.keras.utils import conv_utils
-from keras.utils.data_utils import get_file
+from tensorflow.keras.utils import get_file
 from tensorflow.keras.layers import UpSampling2D
 
 WEIGHTS_PATH_X = "https://github.com/bonlime/keras-deeplab-v3-plus/releases/download/1.1/deeplabv3_xception_tf_dim_ordering_tf_kernels.h5"
@@ -215,7 +215,7 @@ def _xception_block(inputs, depth_list, prefix, skip_connection_type, stride,
 
 
 def relu6(x):
-    return K.relu(x, max_value=6)
+    return tf.nn.relu6(x)
 
 
 def _make_divisible(v, divisor, min_value=None):
